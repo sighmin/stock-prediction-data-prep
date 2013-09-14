@@ -1,3 +1,9 @@
+# netbeans
 /nbproject/private/
 /dist/
 /build/
+
+# indicator files
+indicators.goog.csv
+indicators.mon.csvo
+
