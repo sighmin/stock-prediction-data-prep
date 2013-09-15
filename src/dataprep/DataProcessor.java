@@ -16,7 +16,7 @@ public class DataProcessor {
     
     private ArrayList<Historical> history = new ArrayList();
     private ArrayList<Indicator> indicators = new ArrayList();
-    private int[] PERIODS = {5, 10, 15};
+    private int[] PERIODS = {5, 20, 60};
     
     public DataProcessor(){
         
@@ -78,7 +78,7 @@ public class DataProcessor {
         try {
             FileWriter writer = Extractor.getFileWriter(filename);
             // Headings
-            writer.write("NUM,EMA_5,EMA_10,EMA_15,ROC_5,ROC_10,ROC_15,FORCE_5,FORCE_10,FORCE_15,MFM,ACDL,TARGET\n");
+            writer.write("NUM,EMA_5,EMA_20,EMA_60,ROC_5,ROC_20,ROC_60,FORCE_5,FORCE_20,FORCE_60,MFM,ACDL,TARGET\n");
             // Data
             for (int i = 0; i < indicators.size(); ++i){
                 writer.write(i + indicators.get(i).toString() + "\n");
